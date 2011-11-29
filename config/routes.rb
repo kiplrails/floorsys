@@ -6,7 +6,9 @@ Floorsys::Application.routes.draw do
   
   root :to => "home#index"
   
-  
+  namespace :user do 
+       match '/dashboard' => "home#new", :as => :root
+     end
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
