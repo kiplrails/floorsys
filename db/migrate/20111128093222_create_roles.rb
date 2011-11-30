@@ -5,6 +5,21 @@ class CreateRoles < ActiveRecord::Migration
 
       t.timestamps
     end
+    execute <<-SQL
+    INSERT INTO roles(name) VALUES('Super');
+    
+    SQL
+    
+    execute <<-SQL
+    INSERT INTO roles(name) VALUES('Admin');
+    
+    SQL
+    
+    execute <<-SQL
+    INSERT INTO roles(name) VALUES('Staff');
+    
+    SQL
+    
   end
 
   def self.down

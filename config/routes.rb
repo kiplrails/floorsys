@@ -3,6 +3,7 @@ Floorsys::Application.routes.draw do
   devise_for :admins
 
   devise_for :users
+  resources :users
   
   root :to => "home#index"
   
